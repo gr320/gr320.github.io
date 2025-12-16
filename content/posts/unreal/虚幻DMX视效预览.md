@@ -2,7 +2,7 @@
 title: "虚幻引擎DMX视效预览"
 date: 2021-04-16T14:53:03+01:00
 lastmod: 2021-04-16T14:53:03+01:00
-draft: true
+draft: false
 description: "Unreal + DMX +MA2"
 categories: [Unreal]
 authors: [wzx]
