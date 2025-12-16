@@ -1,0 +1,62 @@
+name: Deploy Hugo Site
+
+on:
+  push:
+    branches: [ main ]  # 当推送到main分支时触发
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:     # 允许手动触发
+
+# 设置权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 并发控制
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用最新的Ubuntu环境
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # 重要：获取主题子模块
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'  # 使用最新版Hugo
+          extended: true          # 必须：DoIt主题需要扩展版
+
+      - name: Build
+        run: |
+          # 安装DoIt主题的Node.js依赖（如果需要）
+          cd themes/DoIt && npm install 2>/dev/null || true
+          cd ../..
+          # 构建网站（生产环境）
+          hugo --minify --environment production
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public  # 上传构建的public目录
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

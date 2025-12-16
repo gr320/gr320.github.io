@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - 我的博客</title>
+        <link>http://localhost:1313/categories/</link>
+        <description>Categories - Category - 我的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 13 Mar 2025 01:57:14 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Tests</title>
+    <link>http://localhost:1313/categories/tests/</link>
+    <pubDate>Thu, 13 Mar 2025 01:57:14 &#43;0800</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/categories/tests/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>个人成长</title>
+    <link>http://localhost:1313/categories/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
+    <pubDate>Mon, 15 Jan 2024 10:00:00 &#43;0800</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/categories/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Documentation</title>
+    <link>http://localhost:1313/categories/documentation/</link>
+    <pubDate>Mon, 28 Feb 2022 14:27:14 &#43;0000</pubDate><author>
+        <name>Author</name>
+    </author><guid>http://localhost:1313/categories/documentation/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>
