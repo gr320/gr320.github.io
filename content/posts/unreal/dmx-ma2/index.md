@@ -4,6 +4,7 @@ date: 2021-04-16T14:53:03+01:00
 lastmod: 2021-04-16T14:53:03+01:00
 draft: false
 description: "Unreal + DMX +MA2"
+featuredImage: "featured-image.png"
 categories: [Unreal]
 authors: [wzx]
 math:
@@ -12,7 +13,8 @@ math:
 ---
 
 
-[TOC]
+toc:
+  auto: trye
 
 # 虚幻引擎DMX视效预览
 
