@@ -8,8 +8,7 @@ categories: [Unreal]
 authors: [wzx]
 math:
   enable: true
-hiddenFromHomePage: true
-hiddenFromSearch: true
+
 ---
 
 

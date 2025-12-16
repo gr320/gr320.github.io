@@ -13,6 +13,8 @@ categories: ["documentation"]
 series: ["getting-start"]
 series_weight: 3
 lightgallery: true
+hiddenFromHomePage: true
+hiddenFromSearch: true
 ---
 
 **Hugo** 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁.

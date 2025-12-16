@@ -11,8 +11,8 @@ tags: ["diagram", "markdown"]
 categories: ["Documentation"]
 series: [how-to-doit]
 
-hiddenFromHomePage: false
-hiddenFromSearch: false
+hiddenFromHomePage: true
+hiddenFromSearch: true
 
 featuredImage: ""
 featuredImagePreview: ""
@@ -23,6 +23,7 @@ toc:
 
 code:
     maxShownLines: 100
+
 ---
 
 <!--more-->

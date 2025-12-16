@@ -16,6 +16,8 @@ lightgallery: true
 
 toc:
   auto: false
+hiddenFromHomePage: true
+hiddenFromSearch: true
 ---
 
 探索 Hugo - **DoIt** 主题的全部内容和背后的核心概念.

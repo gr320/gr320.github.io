@@ -12,6 +12,9 @@ tags: ["emoji"]
 categories: ["documentation"]
 
 lightgallery: true
+
+hiddenFromHomePage: true
+hiddenFromSearch: true
 ---
 
 Emoji 可以通过多种方式在 Hugo 项目中启用.
