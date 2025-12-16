@@ -129,3 +129,11 @@ enableRobotsTXT = true
   [params.analytics.baidu]
     id = "5df0a6c6d1967f75f3049a39990c61a3"
 
+# Google AdSense 配置
+[params.page]
+  # 在文章页面注入自定义内容
+  [params.page.library]
+    [params.page.library.js]
+      # Google AdSense 脚本
+      googleAdsense = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5892704178984065"
+
