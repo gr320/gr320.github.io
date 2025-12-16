@@ -1,5 +1,6 @@
 {{- /* Desktop header */ -}}
-<script>
+<header class="desktop print:!tw-hidden" id="header-desktop">
+  <script>
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
@@ -8,8 +9,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-<header class="desktop print:!tw-hidden" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
             <a href="{{ .Site.Home.RelPermalink }}" title="{{ .Site.Title }}">
