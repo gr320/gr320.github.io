@@ -114,9 +114,9 @@ enableRobotsTXT = true
 
 # 社交账号配置
 [params.social]
-  GitHub = "your-github-username"
-  Email = "your-email@example.com"
-  RSS = true
+  #GitHub = "your-github-username"
+  #Email = "your-email@example.com"
+  #RSS = true
   # 可以添加更多社交账号，取消注释并填写：
   # Weibo = "your-weibo-id"
   # Bilibili = "your-bilibili-id"
