@@ -76,7 +76,6 @@ enableRobotsTXT = true
 #     title = ""
 #     weight = 8
 
-
 # 主页配置
 [params]
   # 网站描述
@@ -137,4 +136,3 @@ enableRobotsTXT = true
     [params.page.library.js]
       # Google AdSense 脚本
       googleAdsense = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5892704178984065"
-
