@@ -18,64 +18,63 @@ enableEmoji = true
 # 是否使用 robots.txt
 enableRobotsTXT = true
 
-# 菜单配置 - 暂时屏蔽
-# [menu]
-#   [[menu.main]]
-#     identifier = "posts"
-#     name = "所有文章"
-#     url = "/posts/"
-#     title = ""
-#     weight = 1
-
-#   [[menu.main]]
-#     identifier = "tags"
-#     name = "标签"
-#     url = "/tags/"
-#     title = ""
-#     weight = 2
-
-#   [[menu.main]]
-#     identifier = "categories"
-#     name = "分类"
-#     url = "/categories/"
-#     title = ""
-#     weight = 3
-
-#   [[menu.main]]
-#     identifier = "series"
-#     name = "系列"
-#     url = "/series/"
-#     title = ""
-#     weight = 4
-
-#   [[menu.main]]
-#     identifier = "authors"
-#     name = "作者"
-#     url = "/authors/"
-#     title = ""
-#     weight = 5
-
-#   [[menu.main]]
-#     identifier = "showcase"
-#     name = "作品"
-#     url = "/showcase/"
-#     title = ""
-#     weight = 6
-
-#   [[menu.main]]
-#     identifier = "documentation"
-#     name = "文档"
-#     url = "/categories/documentation/"
-#     title = ""
-#     weight = 7
-
-#   [[menu.main]]
-#     identifier = "about"
-#     name = "关于"
-#     url = "/about/"
-#     title = ""
-#     weight = 8
-
+# 菜单配置
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "所有文章"
+    url = "/posts/"
+    title = ""
+    weight = 1
+  
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+  
+  [[menu.main]]
+    identifier = "series"
+    name = "系列"
+    url = "/series/"
+    title = ""
+    weight = 4
+  
+  [[menu.main]]
+    identifier = "authors"
+    name = "作者"
+    url = "/authors/"
+    title = ""
+    weight = 5
+  
+  [[menu.main]]
+    identifier = "showcase"
+    name = "作品"
+    url = "/showcase/"
+    title = ""
+    weight = 6
+  
+  [[menu.main]]
+    identifier = "documentation"
+    name = "文档"
+    url = "/categories/documentation/"
+    title = ""
+    weight = 7
+  
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    title = ""
+    weight = 8
 
 # 主页配置
 [params]
