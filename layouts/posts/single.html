@@ -220,7 +220,34 @@
         <div class="content" id="content" data-pagefind-body>
             {{- /* Outdated Article Reminder */ -}}
             {{- partial "single/outdatedArticleReminder.html" . -}}
+            
+            {{- /* Google AdSense - 文章顶部广告 */ -}}
+            <div style="margin: 20px 0;">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-client="ca-pub-5892704178984065"
+                     data-ad-slot="4112260467"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+            
+            {{- /* Google AdSense - 文章底部广告 */ -}}
+            <div style="margin: 30px 0;">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5892704178984065"
+                     data-ad-slot="5276619586"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
 
         {{/* Related Content */}}

@@ -1615,9 +1615,3 @@ print("Hello world!")
     Bluesky 帖子的 URL。
 
 一个 `bluesky` 示例:
-
-```markdown
-{{</* bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" */>}}
-```
-
-呈现的输出效果为 {{< bluesky link="https://bsky.app/profile/bsky.app/post/3latotljnec2h" >}}

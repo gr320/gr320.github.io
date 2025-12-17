@@ -18,6 +18,19 @@
             {{- partial "home/profile.html" . -}}
         {{- end -}}
 
+        {{- /* Google AdSense - 首页顶部广告 */ -}}
+        <div style="margin: 30px auto; max-width: 800px;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5892704178984065"
+                 data-ad-slot="4112260467"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         {{- /* Content */ -}}
         {{- if .Content -}}
             <div class="single">
@@ -35,6 +48,19 @@
                 {{- .Render "summary" -}}
             {{- end -}}
             {{- partial "paginator.html" . -}}
+            
+            {{- /* Google AdSense - 首页底部广告 */ -}}
+            <div style="margin: 30px auto; max-width: 800px;">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5892704178984065"
+                     data-ad-slot="5276619586"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         {{- end -}}
     </div>
 {{- end -}}
