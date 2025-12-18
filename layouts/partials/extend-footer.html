@@ -1,0 +1,29 @@
+{{/* 备案号显示 */}}
+{{ if .Site.Params.icp }}
+<div class="text-center mt-4">
+  <p class="text-sm text-neutral-500 dark:text-neutral-400">
+    {{ if .Site.Params.icp.number }}
+      <a 
+        class="hover:underline hover:decoration-primary-400 hover:text-primary-500" 
+        href="https://beian.miit.gov.cn/" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        {{ .Site.Params.icp.number }}
+      </a>
+    {{ end }}
+    {{ if and .Site.Params.icp.number .Site.Params.icp.police }}
+      <span class="mx-2">|</span>
+    {{ end }}
+    {{ if .Site.Params.icp.police }}
+      <a 
+        class="hover:underline hover:decoration-primary-400 hover:text-primary-500" 
+        href="http://www.beian.gov.cn/portal/registerSystemInfo" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        {{ .Site.Params.icp.police }}
+      </a>
+    {{ end }}
+  </p>
+</div>
+{{ end }}
+

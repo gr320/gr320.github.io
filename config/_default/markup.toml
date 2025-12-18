@@ -1,0 +1,52 @@
+# ========================================
+# Markdown 渲染配置
+# ========================================
+# 这些设置是主题正常工作所必需的
+
+# Goldmark 是 Hugo 的默认 Markdown 渲染器
+[goldmark]
+  # 解析器配置
+  [goldmark.parser]
+    # 不将独立图片包裹在段落标签中（提高图片显示灵活性）
+    wrapStandAloneImageWithinParagraph = false
+
+    # 属性配置（允许为 Markdown 块添加自定义属性）
+    [goldmark.parser.attribute]
+      # 启用块级属性（如 {.class #id}）
+      block = true
+
+  # 渲染器配置
+  [goldmark.renderer]
+    # 允许不安全的 HTML（可以在 Markdown 中使用原始 HTML）
+    unsafe = true
+
+  # 扩展功能配置
+  [goldmark.extensions]
+    # Passthrough 扩展（用于数学公式等特殊内容）
+    [goldmark.extensions.passthrough]
+      # 启用 passthrough 扩展
+      enable = true
+      # 分隔符配置
+      [goldmark.extensions.passthrough.delimiters]
+        # 块级分隔符（用于多行数学公式）
+        # \[ ... \] 和 $$ ... $$
+        block = [['\[', '\]'], ['$$', '$$']]
+        # 行内分隔符（用于行内数学公式）
+        # \( ... \)
+        inline = [['\(', '\)']]
+
+# ========================================
+# 代码高亮配置
+# ========================================
+[highlight]
+  # 不使用内联样式，而是使用 CSS 类（便于自定义样式）
+  noClasses = false
+
+# ========================================
+# 目录配置（Table of Contents）
+# ========================================
+[tableOfContents]
+  # 目录起始级别（从 h2 开始）
+  startLevel = 2
+  # 目录结束级别（到 h4 结束）
+  endLevel = 4

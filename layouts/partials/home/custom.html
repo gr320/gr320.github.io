@@ -1,0 +1,17 @@
+{{/* 
+自定义首页布局
+此文件仅用于演示目的，已简化为只显示 background 布局
+如需切换首页布局，请修改 config/_default/params.toml 中的：
+
+[homepage]
+  layout = "background"  # 可选：page、profile、hero、card、background
+  
+然后重启 hugo server
+*/}}
+
+{{ partial "home/background.html" . }}
+
+<section>
+  {{ partial "recent-articles-demo.html" . }}
+</section>
+

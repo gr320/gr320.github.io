@@ -1,12 +1,25 @@
-<!-- 文章顶部广告 -->
-<div style="margin: 20px 0;">
+{{/* 文章顶部广告 */}}
+{{ if .Site.Params.adsense.enable }}
+{{ $bgColor := .Site.Params.adsense.backgroundColor | default "#ffffff" }}
+{{ $darkBgColor := .Site.Params.adsense.darkBackgroundColor | default "#1f2937" }}
+{{ $padding := .Site.Params.adsense.padding | default "1.5rem" }}
+{{ $borderRadius := .Site.Params.adsense.borderRadius | default "0.5rem" }}
+<div class="article-ad-top my-6" 
+     style="background-color: {{ $bgColor }}; padding: {{ $padding }}; border-radius: {{ $borderRadius }};">
+  <style>
+    .dark .article-ad-top {
+      background-color: {{ $darkBgColor }} !important;
+    }
+  </style>
   <ins class="adsbygoogle"
        style="display:block"
-       data-ad-client="ca-pub-5892704178984065"
-       data-ad-slot="4112260467"
+       data-ad-client="{{ .Site.Params.adsense.client }}"
+       data-ad-slot="{{ .Site.Params.adsense.topSlot }}"
        data-ad-format="auto"
        data-full-width-responsive="true"></ins>
   <script>
        (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
+{{ end }}
+

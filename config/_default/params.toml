@@ -1,0 +1,416 @@
+# ========================================
+# 主题选项配置
+# ========================================
+# 这些选项控制主题的功能和网站显示方式
+# 详细文档：https://blowfish.page/docs/configuration/#theme-parameters
+
+# ========================================
+# 基础外观设置
+# ========================================
+# 配色方案（blowfish 为默认主题配色）
+colorScheme = "blowfish"
+# 默认外观模式（light 或 dark）
+defaultAppearance = "dark"
+# 是否根据系统自动切换明暗模式
+autoSwitchAppearance = true
+
+# ========================================
+# 功能开关
+# ========================================
+# 是否启用无障碍辅助功能面板
+enableA11y = false
+# 是否启用搜索功能
+enableSearch = true
+# 是否启用代码复制按钮
+enableCodeCopy = true
+# 是否启用结构化面包屑导航
+enableStructuredBreadcrumbs = true
+
+# 是否启用邮件回复功能
+replyByEmail = false
+
+# 主要内容部分（这些部分的文章会在首页显示）
+mainSections = ["posts", "docs"]
+# robots = ""  # robots meta 标签设置
+
+# ========================================
+# 图片优化设置
+# ========================================
+# 是否禁用图片优化
+disableImageOptimization = false
+# 是否禁用 Markdown 中的图片优化
+disableImageOptimizationMD = false
+# 是否在页眉中禁用文本显示
+disableTextInHeader = false
+# backgroundImageWidth = 1200  # 背景图片宽度
+
+# 默认背景图片
+defaultBackgroundImage = "/img/background.svg"
+# 默认特色图片
+defaultFeaturedImage = "/img/featured.svg"
+# 默认社交分享图片
+defaultSocialImage = "/img/blowfish_banner.png"
+# 是否使用外链特色图片
+hotlinkFeatureImage = false
+# imagePosition = "50% 50%"  # 图片定位
+
+# ========================================
+# 导航和目录设置
+# ========================================
+# 是否高亮显示当前菜单区域
+highlightCurrentMenuArea = true
+# 是否启用智能目录（自动隐藏/显示）
+smartTOC = true
+# 智能目录是否隐藏未聚焦的子项
+smartTOCHideUnfocusedChildren = false
+
+# Git 服务器配置
+#giteaDefaultServer = "https://git.fsfe.org"
+#forgejoDefaultServer = "https://v11.next.forgejo.org"
+
+# 指纹算法（用于资源完整性验证）
+# 可选值："sha512"（默认）、"sha384"、"sha256"
+fingerprintAlgorithm = "sha512"
+
+# ========================================
+# 页眉配置
+# ========================================
+[header]
+  # 页眉布局样式
+  # 可选值：basic（基础）、fixed（固定）、fixed-fill（固定填充）、
+  #        fixed-gradient（固定渐变）、fixed-fill-blur（固定填充模糊）
+  layout = "fixed"
+
+# ========================================
+# 页脚配置
+# ========================================
+[footer]
+  # 是否显示页脚菜单
+  showMenu = true
+  # 是否显示版权信息
+  showCopyright = false
+  # 是否显示主题署名
+  showThemeAttribution = false
+  # 是否显示外观切换器（明暗模式切换）
+  showAppearanceSwitcher = true
+  # 是否显示返回顶部按钮
+  showScrollToTop = true
+
+# ========================================
+# 首页配置
+# ========================================
+[homepage]
+  # 首页布局样式
+  # 可选值：page（页面）、profile（个人资料）、hero（英雄头图）、
+  #        card（卡片）、background（背景）、custom（自定义）
+  layout = "custom"
+  # 首页图片（用于 hero 和 card 布局）
+  # homepageImage = "/img/iceland.jpg"
+  # 是否显示最近文章
+  showRecent = false
+  # 显示最近文章的数量
+  showRecentItems = 12
+  # 是否显示"查看更多"链接
+  showMoreLink = true
+  # "查看更多"链接的目标
+  showMoreLinkDest = "posts"
+  # 是否使用卡片视图
+  cardView = true
+  # 卡片视图是否全屏宽度
+  cardViewScreenWidth = false
+  # 是否启用背景模糊（仅用于 background 布局）
+  layoutBackgroundBlur = true
+  # 是否禁用英雄图片滤镜（仅用于 hero 布局）
+  disableHeroImageFilter = false
+
+# ========================================
+# 文章页面配置
+# ========================================
+[article]
+  # 是否显示日期
+  showDate = false
+  # 是否显示浏览量（需要配置分析服务）
+  showViews = false
+  # 是否显示点赞数（需要配置 Firebase）
+  showLikes = false
+  # 是否仅在文章内显示日期
+  showDateOnlyInArticle = false
+  # 是否显示更新日期
+  showDateUpdated = false
+  # 是否显示作者信息
+  showAuthor = true
+  # 是否在底部显示作者信息
+  # showAuthorBottom = false
+  # 是否显示英雄头图
+  showHero = true
+  # 英雄头图样式
+  # 可选值：basic（基础）、big（大图）、background（背景）、thumbAndBackground（缩略图+背景）
+  heroStyle = "background"
+  # 是否启用背景模糊（仅用于 background 样式）
+  layoutBackgroundBlur = true
+  # 是否在背景中保留页眉空间（仅用于 background 样式）
+  layoutBackgroundHeaderSpace = false
+  # 是否显示面包屑导航
+  showBreadcrumbs = true
+  # 是否显示草稿标签
+  showDraftLabel = true
+  # 是否显示编辑链接
+  showEdit = false
+  # 编辑链接的 URL
+  editURL = ""
+  # 是否在编辑 URL 后附加文件路径
+  editAppendPath = true
+  # 系列文章是否默认展开
+  seriesOpened = false
+  # 是否显示标题锚点
+  showHeadingAnchors = true
+  # 是否显示分页导航
+  showPagination = true
+  # 是否反转分页顺序
+  invertPagination = false
+  # 是否显示阅读时间
+  showReadingTime = true
+  # 是否显示目录
+  showTableOfContents = true
+  # 是否显示相关内容
+  showRelatedContent = true
+  # 相关内容显示数量限制
+  relatedContentLimit = 9
+  # 是否显示分类标签
+  showTaxonomies = true
+  # 是否显示作者徽章
+  showAuthorsBadges = true
+  # 是否显示字数统计
+  showWordCount = false
+  # 分享链接（可选的社交平台）
+  sharingLinks = [ "linkedin", "twitter", "bluesky", "reddit", "whatsapp", "telegram", "pinterest", "facebook", "email", "line"]
+  # 是否显示禅模式（专注阅读模式）
+  showZenMode = true
+
+# ========================================
+# 列表页面配置
+# ========================================
+[list]
+  # 是否显示英雄头图
+  showHero = true
+  # 英雄头图样式
+  # 可选值：basic、big、background、thumbAndBackground
+  heroStyle = "background"
+  # 是否启用背景模糊（仅用于 background 样式）
+  layoutBackgroundBlur = true
+  # 是否在背景中保留页眉空间
+  layoutBackgroundHeaderSpace = false
+  # 是否显示面包屑导航
+  showBreadcrumbs = false
+  # 是否显示文章摘要
+  showSummary = false
+  # 是否显示浏览量
+  showViews = false
+  # 是否显示点赞数
+  showLikes = false
+  # 是否显示目录
+  showTableOfContents = true
+  # 是否显示卡片
+  showCards = true
+  # 是否按权重排序
+  orderByWeight = true
+  # 是否按年份分组
+  groupByYear = false
+  # 是否使用卡片视图
+  cardView = true
+  # 卡片视图是否全屏宽度
+  cardViewScreenWidth = false
+  # 是否限制项目宽度
+  constrainItemsWidth = false
+
+# ========================================
+# 站点地图配置
+# ========================================
+[sitemap]
+  # 要排除的内容类型（空数组表示包含所有类型）
+  excludedKinds = []
+
+# ========================================
+# 分类页面配置（如所有标签的列表）
+# ========================================
+[taxonomy]
+  # 是否显示术语计数
+  showTermCount = true
+  # 是否显示英雄头图
+  showHero = true
+  # 英雄头图样式
+  heroStyle = "background"
+  # 是否显示面包屑导航
+  showBreadcrumbs = false
+  # 是否显示浏览量
+  showViews = false
+  # 是否显示点赞数
+  showLikes = false
+  # 是否显示目录
+  showTableOfContents = true
+  # 是否使用卡片视图
+  cardView = false
+
+# ========================================
+# 术语页面配置（如单个标签的文章列表）
+# ========================================
+[term]
+  # 是否显示英雄头图
+  showHero = true
+  # 英雄头图样式
+  heroStyle = "background"
+  # 是否显示面包屑导航
+  showBreadcrumbs = false
+  # 是否显示浏览量
+  showViews = false
+  # 是否显示点赞数
+  showLikes = false
+  # 是否显示目录
+  showTableOfContents = true
+  # 是否按年份分组
+  groupByYear = false
+  # 是否使用卡片视图
+  cardView = true
+  # 卡片视图是否全屏宽度
+  cardViewScreenWidth = false
+
+# ========================================
+# Firebase 配置（用于点赞、浏览量等功能）
+# ========================================
+[firebase]
+  # Firebase API 密钥
+  #apiKey = "AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
+  # Firebase 认证域
+  #authDomain = "blowfish-21fff.firebaseapp.com"
+  # Firebase 项目 ID
+  #projectId = "blowfish-21fff"
+  # Firebase 存储桶
+  #storageBucket = "blowfish-21fff.appspot.com"
+  # Firebase 消息发送者 ID
+  #messagingSenderId = "60108104191"
+  # Firebase 应用 ID
+  #appId = "1:60108104191:web:039842ebe1370698b487ca"
+  # Firebase 测量 ID
+  #measurementId = "G-PEDMYR1V0K"
+
+# ========================================
+# Fathom Analytics 配置（隐私友好的分析工具）
+# ========================================
+[fathomAnalytics]
+  # 站点 ID
+  # site = "ABC12345"
+  # 自定义域名
+  # domain = "llama.yoursite.com"
+
+# ========================================
+# Umami Analytics 配置（开源分析工具）
+# ========================================
+[umamiAnalytics]
+  # 网站 ID
+  # websiteid = "ABC12345"
+  # Umami 服务器域名
+  # domain = "llama.yoursite.com"
+  # 数据域名列表
+  # dataDomains = "yoursite.com,yoursite2.com"
+  # 脚本名称
+  # scriptName = ""
+  # 是否启用事件跟踪
+  # enableTrackEvent = false
+
+# ========================================
+# Seline Analytics 配置
+# ========================================
+[selineAnalytics]
+  # 令牌
+  # token = "XXXXXX"
+  # 是否启用事件跟踪
+  # enableTrackEvent = false
+
+# ========================================
+# Buy Me a Coffee 配置（赞助功能）
+# ========================================
+[buymeacoffee]
+  # Buy Me a Coffee 用户标识符
+  # identifier = "nunocoracao"
+  # 是否启用全局小部件
+  globalWidget = false
+  # 全局小部件消息
+  globalWidgetMessage = ""
+  # 全局小部件颜色
+  globalWidgetColor = "#FFDD00"
+  # 全局小部件位置（left 或 right）
+  globalWidgetPosition = "right"
+
+# ========================================
+# 搜索引擎验证配置
+# ========================================
+[verification]
+  # Google Search Console 验证码
+  # google = ""
+  # Bing Webmaster Tools 验证码
+  # bing = ""
+  # Pinterest 验证码
+  # pinterest = ""
+  # Yandex Webmaster 验证码
+  # yandex = ""
+
+# ========================================
+# RSSNext 配置（RSS 订阅服务）
+# ========================================
+[rssnext]
+  # Feed ID
+  # feedId = ""
+  # 用户 ID
+  # userId = ""
+
+# ========================================
+# 广告配置
+# ========================================
+[advertisement]
+  # Google AdSense 发布者 ID
+  adsense = "ca-pub-5892704178984065"
+
+# ========================================
+# Google AdSense 广告位配置
+# ========================================
+[adsense]
+  # 是否启用 AdSense
+  enable = true
+  # 发布者 ID
+  client = "ca-pub-5892704178984065"
+  # 文章顶部广告位 ID
+  topSlot = "4112260467"
+  # 文章底部广告位 ID
+  bottomSlot = "4112260467"
+  # 侧边栏广告位 ID
+  sidebarSlot = "9038936472"
+  
+  # 广告区域样式配置
+  # 亮色模式背景色（支持十六进制、RGB、颜色名称）
+  backgroundColor = "#ffffff"
+  # 暗色模式背景色
+  darkBackgroundColor = "#1f2937"
+  # 内边距（支持 px、rem、em 等单位）
+  padding = "1.5rem"
+  # 圆角（支持 px、rem、em 等单位，0 表示无圆角）
+  borderRadius = "0.5rem"
+
+
+# ========================================
+# 百度统计配置
+# ========================================
+[baidu]
+  # 百度统计 ID（从百度统计代码中获取）
+  # 示例：如果代码是 hm.js?abc123，则填写 abc123
+  analytics = "5df0a6c6d1967f75f3049a39990c61a3"  # 填写您的百度统计 ID
+
+# ========================================
+# ICP 备案号配置（中国网站备案）
+# ========================================
+[icp]
+  # ICP 备案号（例如：京ICP备12345678号）
+  #number = "京ICP备18048836号"
+  # 公安备案号（例如：京公网安备 11010802012345号）
+  #police = "京公网安备 11010802012345号"
+
+

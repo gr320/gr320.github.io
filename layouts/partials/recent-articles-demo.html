@@ -1,0 +1,56 @@
+{{ $recentArticles := 5 }}
+{{ $showMoreLinkDest := "/posts/" }}
+{{ if index .Site.Params.homepage "showRecentItems" }}
+  {{ $recentArticles = .Site.Params.homepage.showRecentItems }}
+{{ end }}
+
+{{/* 
+文章列表配置说明：
+在 config/_default/params.toml 中修改以下配置来控制显示样式：
+
+[homepage]
+  cardView = true                    # 是否使用卡片视图（false 为标准列表）
+  cardViewScreenWidth = false        # 卡片视图是否全屏宽度（true 为全宽）
+  constrainItemsWidth = false        # 是否限制项目宽度（仅用于非卡片视图）
+
+组合效果：
+- cardView = true, cardViewScreenWidth = false  → 卡片视图（限制宽度）
+- cardView = true, cardViewScreenWidth = true   → 卡片视图（全屏宽度）
+- cardView = false                              → 标准列表视图
+*/}}
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">{{ i18n "shortcode.recent_articles" | emojify }}</h2>
+
+{{ if .Site.Params.homepage.cardView }}
+  {{ if .Site.Params.homepage.cardViewScreenWidth }}
+    {{/* 卡片视图 - 全屏宽度 */}}
+    <div class="h-full">
+      {{ partial "recent-articles/cardview-fullwidth.html" . }}
+    </div>
+  {{ else }}
+    {{/* 卡片视图 - 限制宽度 */}}
+    <div class="h-full">
+      {{ partial "recent-articles/cardview.html" . }}
+    </div>
+  {{ end }}
+{{ else }}
+  {{/* 标准列表视图 */}}
+  <div class="h-full">
+    {{ partial "recent-articles/list.html" . }}
+  </div>
+{{ end }}
+
+{{ if .Site.Params.homepage.showMoreLink | default false }}
+  {{ if index .Site.Params.homepage "showRecentItems" }}
+    {{ $showMoreLinkDest = .Site.Params.homepage.showMoreLinkDest }}
+  {{ end }}
+  <div class="mt-10 flex justify-center">
+    <a href="{{ $showMoreLinkDest }}">
+      <button
+        class="bg-transparent hover:text-primary-500 prose dark:prose-invert font-semibold py-2 px-4 border border-primary-500 hover:border-transparent rounded">
+        {{ i18n "recent.show_more" | markdownify }}
+      </button>
+    </a>
+  </div>
+{{ end }}
+

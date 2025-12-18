@@ -1,0 +1,146 @@
+# ========================================
+# 默认环境站点配置
+# ========================================
+# 此文件会覆盖根目录 hugo.toml 中的同名配置
+# 更多参数详情请参考主题文档
+# https://blowfish.page/docs/getting-started/
+
+# 使用的主题名称
+theme = "blowfish"
+# 网站基础 URL（生产环境需修改为实际域名）
+baseURL = "https://s-game.net/"
+# 默认内容语言
+defaultContentLanguage = "zh-cn"
+# 禁用的语言列表（只保留中文）
+disableLanguages = ["en", "it", "ja"]
+
+# pluralizeListTitles = "true" # Hugo 函数，对非英语语言很有用，详见 https://gohugo.io/getting-started/configuration/#pluralizelisttitles
+
+# 启用 robots.txt 生成（SEO）
+enableRobotsTXT = true
+# 摘要长度（字数）
+summaryLength = 30
+# 启用中日韩语言支持（正确处理中文字符）
+hasCJKLanguage = true
+
+# 是否构建草稿内容（开发时可设为 true）
+buildDrafts = false
+# 是否构建未来日期的内容
+buildFuture = false
+
+# 启用 Emoji 表情支持 :tada:
+enableEmoji = true
+
+# Google Analytics 跟踪 ID（已禁用）
+# googleAnalytics = "G-PEDMYR1V0K"
+
+# ========================================
+# 分页配置
+# ========================================
+[pagination]
+  # 每页显示的文章数量
+  pagerSize = 102
+
+# ========================================
+# 图片处理配置
+# ========================================
+[imaging]
+  # 图片裁剪锚点位置（Center/Top/Bottom/Left/Right）
+  anchor = 'Center'
+
+# ========================================
+# 分类系统配置（用于内容组织）
+# ========================================
+[taxonomies]
+  # 标签分类
+  tag = "tags"
+  # 类别分类
+  category = "categories"
+  # 作者分类
+  author = "authors"
+  # 系列分类
+  series = "series"
+
+# ========================================
+# 站点地图配置（SEO 优化）
+# ========================================
+[sitemap]
+  # 更新频率（always/hourly/daily/weekly/monthly/yearly/never）
+  changefreq = 'always'
+  # 站点地图文件名
+  filename = 'sitemap.xml'
+  # 页面优先级（0.0-1.0）
+  priority = 0.5
+
+# ========================================
+# 输出格式配置
+# ========================================
+[outputs]
+  # 首页输出格式：HTML、RSS 订阅和 JSON 搜索索引
+  home = ["HTML", "RSS", "JSON"]
+
+# ========================================
+# 相关内容推荐配置
+# ========================================
+[related]
+  # 相关度阈值（0 表示显示所有相关内容）
+  threshold = 0
+  # 是否转换为小写进行匹配
+  toLower = false
+
+    # 相关内容索引：标签（权重最高，最重要）
+    [[related.indices]]
+        name = "tags"
+        weight = 100
+
+    # 相关内容索引：分类（权重同标签）
+    [[related.indices]]
+        name = "categories"
+        weight = 100
+
+    # 相关内容索引：系列（中等权重）
+    [[related.indices]]
+        name = "series"
+        weight = 50
+
+    # 相关内容索引：作者（较低权重）
+    [[related.indices]]
+        name = "authors"
+        weight = 20
+
+    # 相关内容索引：日期（最低权重）
+    [[related.indices]]
+        name = "date"
+        weight = 10
+
+    # 相关内容索引：片段引用
+    [[related.indices]]
+      applyFilter = false
+      name = 'fragmentrefs'
+      type = 'fragments'
+      weight = 10
+
+# ========================================
+# 分段渲染配置（性能优化）
+# ========================================
+# 用于加快开发速度，只渲染网站的特定部分
+# 注意：development/hugo.toml 中还有更多被忽略的文件
+#
+# 使用方式：
+#   hugo --renderSegments core
+#   hugo --renderSegments core,en_only
+[segments]
+  # 核心页面段（用于调试核心功能）
+  [segments.core]
+    [[segments.core.includes]]
+      # 只渲染首页、文档、示例等核心页面
+      path = '{/,/docs,/docs/**,/samples,/samples/**}'
+  
+  # 仅英文段（用于英文内容测试）
+  [segments.en_only]
+    [[segments.en_only.includes]]
+      # 或者使用环境变量控制：
+      #   - UNIX: HUGO_DISABLELANGUAGES='it ja zh-cn' npm run example:core
+      #   - Windows CMD: set "HUGO_DISABLELANGUAGES=it ja zh-cn" && npm run example:core
+      #   - Windows PowerShell: $env:HUGO_DISABLELANGUAGES="it ja zh-cn"; npm run example:core
+      lang = 'en'
