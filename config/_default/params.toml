@@ -138,7 +138,7 @@ fingerprintAlgorithm = "sha512"
   # 是否显示更新日期
   showDateUpdated = false
   # 是否显示作者信息
-  showAuthor = true
+  showAuthor = false
   # 是否在底部显示作者信息
   # showAuthorBottom = false
   # 是否显示英雄头图
@@ -179,9 +179,11 @@ fingerprintAlgorithm = "sha512"
   # 是否显示分类标签
   showTaxonomies = true
   # 是否显示作者徽章
-  showAuthorsBadges = true
+  showAuthorsBadges = false
   # 是否显示字数统计
   showWordCount = false
+  # 是否显示分享功能
+  showSharingLinks = false
   # 分享链接（可选的社交平台）
   sharingLinks = [ "linkedin", "twitter", "bluesky", "reddit", "whatsapp", "telegram", "pinterest", "facebook", "email", "line"]
   # 是否显示禅模式（专注阅读模式）
@@ -375,7 +377,7 @@ fingerprintAlgorithm = "sha512"
 # ========================================
 [adsense]
   # 是否启用 AdSense
-  enable = true
+  enable = false
   # 发布者 ID
   client = "ca-pub-5892704178984065"
   # 文章顶部广告位 ID
