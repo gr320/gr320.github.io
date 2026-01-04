@@ -377,7 +377,7 @@ fingerprintAlgorithm = "sha512"
 # ========================================
 [adsense]
   # 是否启用 AdSense
-  enable = false
+  enable = true
   # 发布者 ID
   client = "ca-pub-5892704178984065"
   # 文章顶部广告位 ID
