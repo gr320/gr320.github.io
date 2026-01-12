@@ -29,15 +29,8 @@ math:
 
 **二、工作原理流程**
 
-```mermaid
-graph LR
-    A[C#源代码] --> B[C#编译器]
-    B --> C[.NET DLL/字节码]
-    C --> D[il2cpp 转换]
-    D --> E[C++ 代码]
-    E --> F[平台编译器]
-    F --> G[原生可执行文件]
-   
+```
+[C#源代码] → [C#编译器] → [.NET DLL/字节码] → [il2cpp 转换] → [C++ 代码] → [平台编译器] → [原生可执行文件]
 ```
 
 **三、为什么要用 il2cpp？**
@@ -109,7 +102,7 @@ BinaryFormatter formatter = new BinaryFormatter(); // 小心使用
 
 1. 链接器剥离过多代码
 
-   ```
+   ```c#
    // 错误：MethodNotFoundException
    // 解决方案：使用 [Preserve] 属性
    [System.Runtime.CompilerServices.Preserve]
@@ -138,7 +131,7 @@ BinaryFormatter formatter = new BinaryFormatter(); // 小心使用
 
 
 
-## **CLR**
+## CLR
 
 **CLR（Common Language Runtime，公共语言运行时）** 是 **.NET Framework** 和 **.NET Core/.NET 5+** 的核心执行引擎，负责管理 .NET 应用程序的运行时环境。它相当于 Java 的 JVM（Java 虚拟机），但设计理念和实现有所不同。
 
