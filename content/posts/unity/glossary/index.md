@@ -3,6 +3,7 @@ title: "Unity 术语表"
 date: 2026-01-12T14:22:00+08:00
 lastmod: 2026-01-12T14:22:00+08:00
 draft: false
+featuredImage: "featured-image.png"
 description: "Unity 术语表"
 categories: [Unity]
 authors: [wzx]
