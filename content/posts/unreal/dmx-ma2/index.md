@@ -1,7 +1,7 @@
 ---
 title: "虚幻引擎DMX视效预览"
-date: 2025-12-16T14:53:03+01:00
-lastmod: 2025-12-16T14:53:03+01:00
+date: 2025-12-16T14:53:03+08:00
+lastmod: 2025-12-16T14:53:03+08:00
 draft: false
 description: "Unreal + DMX +MA2"
 featuredImage: "featured-image.png"
